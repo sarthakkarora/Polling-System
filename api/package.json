@@ -1,0 +1,12 @@
+{
+  "name": "intervue-io-poll-api",
+  "version": "1.0.0",
+  "description": "API for intervue.io poll platform",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.7.2",
+    "cors": "^2.8.5",
+    "uuid": "^9.0.1"
+  }
+}

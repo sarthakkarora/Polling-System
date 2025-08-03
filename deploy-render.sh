@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# OceanPoll Platform Deployment Script
-# This script deploys the OceanPoll Interactive Learning Platform to Render
+# intervue.io poll Deployment Script
+# This script deploys the intervue.io poll Interactive Learning Platform to Render
 
-echo "🌊 OceanPoll Platform Deployment Script"
+echo "🚀 intervue.io poll Deployment Script"
 echo "======================================"
 
 # Check if required environment variables are set
@@ -73,7 +73,7 @@ if ! git diff-index --quiet HEAD --; then
 fi
 
 # Build the project
-print_status "Building OceanPoll Platform..."
+print_status "Building intervue.io poll Platform..."
 
 # Install dependencies
 print_status "Installing dependencies..."
@@ -106,7 +106,7 @@ DEPLOYMENT_PAYLOAD=$(cat <<EOF
 {
   "branch": "$CURRENT_BRANCH",
   "commitSha": "$(git rev-parse HEAD)",
-  "message": "OceanPoll Platform Deployment - $(date)"
+  "message": "intervue.io poll Deployment - $(date)"
 }
 EOF
 )
@@ -148,7 +148,7 @@ while [ $ATTEMPT -lt $MAX_ATTEMPTS ]; do
     case $STATUS in
         "live")
             print_success "Deployment completed successfully!"
-            print_status "Your OceanPoll Platform is now live!"
+            print_status "Your intervue.io poll Platform is now live!"
             break
             ;;
         "failed")
@@ -173,5 +173,5 @@ if [ $ATTEMPT -eq $MAX_ATTEMPTS ]; then
     print_status "You can monitor the deployment at: https://dashboard.render.com/web/$RENDER_SERVICE_ID"
 fi
 
-print_success "🌊 OceanPoll Platform deployment script completed!"
+print_success "🚀 intervue.io poll deployment script completed!"
 print_status "Your interactive learning platform is ready for use!" 

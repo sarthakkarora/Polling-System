@@ -1,10 +1,10 @@
-# OceanPoll Platform Deployment Guide
+# intervue.io poll - Deployment Guide
 
-This guide provides comprehensive instructions for deploying the OceanPoll Interactive Learning Platform to various cloud platforms.
+This guide provides comprehensive instructions for deploying the intervue.io poll Interactive Learning Platform to various cloud platforms.
 
-## 🌊 Platform Overview
+## 🚀 Platform Overview
 
-OceanPoll is a cutting-edge real-time interactive learning platform built with:
+intervue.io poll is a cutting-edge real-time interactive learning platform built with:
 - **Frontend**: React 18, Redux Toolkit, Socket.io Client, Styled Components
 - **Backend**: Express.js, Socket.io, Node.js
 - **Real-time Communication**: WebSocket connections for live interactions
@@ -17,7 +17,7 @@ OceanPoll is a cutting-edge real-time interactive learning platform built with:
 Render provides seamless deployment for both frontend and backend services.
 
 #### Prerequisites
-- GitHub account with your OceanPoll repository
+- GitHub account with your intervue.io poll repository
 - Render account (free tier available)
 
 #### Deployment Steps
@@ -35,7 +35,7 @@ Render provides seamless deployment for both frontend and backend services.
    - Click "New +" → "Web Service"
    - Connect your GitHub repository
    - Configure the service:
-     - **Name**: `oceanpoll-backend`
+     - **Name**: `intervue-io-poll-backend`
      - **Root Directory**: `server`
      - **Build Command**: `npm install`
      - **Start Command**: `npm start`
@@ -50,7 +50,7 @@ Render provides seamless deployment for both frontend and backend services.
    - Click "New +" → "Static Site"
    - Connect your GitHub repository
    - Configure the service:
-     - **Name**: `oceanpoll-frontend`
+     - **Name**: `intervue-io-poll-frontend`
      - **Root Directory**: `client`
      - **Build Command**: `npm install && npm run build`
      - **Publish Directory**: `build`
@@ -113,7 +113,7 @@ Render provides seamless deployment for both frontend and backend services.
 2. **Deploy Backend**
    ```bash
    # Create Heroku app
-   heroku create oceanpoll-backend
+   heroku create intervue-io-poll-backend
    
    # Set environment variables
    heroku config:set NODE_ENV=production
@@ -126,7 +126,7 @@ Render provides seamless deployment for both frontend and backend services.
 3. **Deploy Frontend**
    ```bash
    # Create another Heroku app
-   heroku create oceanpoll-frontend
+   heroku create intervue-io-poll-frontend
    
    # Set buildpacks
    heroku buildpacks:set mars/create-react-app
@@ -324,7 +324,7 @@ npm run build --dry-run
 
 ## 📚 Additional Resources
 
-- [OceanPoll Documentation](https://github.com/your-username/oceanpoll-platform)
+- [intervue.io poll Documentation](https://github.com/sarthakkarora/Polling-System)
 - [React Deployment Guide](https://create-react-app.dev/docs/deployment/)
 - [Express.js Production Best Practices](https://expressjs.com/en/advanced/best-practices-production.html)
 - [Socket.io Deployment Guide](https://socket.io/docs/v4/deployment/)
