@@ -2,7 +2,7 @@
 
 A real-time interactive learning system built with React, Redux, Express.js, and Socket.io. Designed for modern educational environments where educators can create engaging polls and students can participate in real-time learning experiences with instant answer feedback.
 
-**Developed by:** [Sarthak Karora](https://github.com/sarthakkarora)
+**Developed by:** [Sarthak Arora](https://github.com/sarthakkarora)
 
 ## 🌊 Features
 
