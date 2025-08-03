@@ -74,31 +74,25 @@ A real-time interactive learning system built with React, Redux, Express.js, and
 
 2. **Install dependencies**
    ```bash
-   # Install root dependencies
+   # Install frontend dependencies
    npm install
    
    # Install server dependencies
-   cd server && npm install
-   
-   # Install client dependencies
-   cd ../client && npm install
-   
-   # Return to root
-   cd ..
+   cd server && npm install && cd ..
    ```
 
 3. **Environment Setup**
    
    Create a `.env` file in the server directory:
    ```env
-   PORT=5000
+   PORT=5001
    CLIENT_URL=http://localhost:3000
    NODE_ENV=development
    ```
 
-   Create a `.env` file in the client directory:
+   Create a `.env` file in the root directory:
    ```env
-   REACT_APP_SERVER_URL=http://localhost:5000
+   REACT_APP_SERVER_URL=http://localhost:5001
    REACT_APP_ENVIRONMENT=development
    ```
 
@@ -109,10 +103,10 @@ A real-time interactive learning system built with React, Redux, Express.js, and
    
    # Or start them separately:
    # Terminal 1 - Backend
-   npm run server
+   cd server && npm start
    
-   # Terminal 2 - Frontend
-   npm run client
+   # Terminal 2 - Frontend (in new terminal)
+   npm start
    ```
 
 5. **Access the application**
@@ -158,20 +152,19 @@ A real-time interactive learning system built with React, Redux, Express.js, and
 
 ```
 Live-Polling-System-main/
-├── client/                 # React frontend
-│   ├── public/
-│   ├── src/
-│   │   ├── components/    # React components (StudentDashboard, TeacherLogin, etc.)
-│   │   ├── store/         # Redux store and slices
-│   │   ├── styles/        # Global styles and themes
-│   │   ├── contexts/      # React contexts (ThemeContext)
-│   │   ├── utils/         # Utility functions
-│   │   └── App.js         # Main app component
-│   └── package.json
-├── server/                 # Express.js backend
+├── src/                   # React components (StudentDashboard, TeacherLogin, etc.)
+│   ├── components/        # React components
+│   ├── store/             # Redux store and slices
+│   ├── styles/            # Global styles and themes
+│   ├── contexts/          # React contexts (ThemeContext)
+│   ├── utils/             # Utility functions
+│   └── App.js             # Main app component
+├── public/                # Public assets and index.html
+├── server/                # Express.js backend
 │   ├── index.js           # Main server file with Socket.io and answer validation
-│   └── package.json
-├── package.json            # Root package.json
+│   └── package.json       # Server dependencies
+├── package.json           # Frontend dependencies (React app)
+├── vercel.json            # Vercel deployment configuration
 └── README.md
 ```
 
